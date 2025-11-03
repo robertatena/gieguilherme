@@ -1,8 +1,13 @@
 "use client";
+"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
 import { Heart, Calendar, MapPin, Gift, Clock, Phone, Mail } from "lucide-react";
+
+import { WEDDING, currency } from "../lib/config";
+import { Card } from "../components/Card";
+import { Copyable } from "../components/Copyable";
 
 function useCountdown(targetISO: string) {
   const [now, setNow] = React.useState(Date.now());
